@@ -1,7 +1,7 @@
 # Water Value Database: A Systematic Review Dataset
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![DOI](https://img.shields.io/badge/DOI-PLACEHOLDER-blue.svg)](https://doi.org/PLACEHOLDER)
+[![DOI](https://zenodo.org/badge/1167031438.svg)](https://doi.org/10.5281/zenodo.18778100)
 
 ## Description
 
@@ -115,7 +115,7 @@ All summary tables are located in the `tables/` directory.
 If you use this dataset, please cite:
 
 **Dataset:**
-> [PLACEHOLDER — Authors]. (2025). *Water Value Database: A Systematic Review Dataset (Version 1.0.0)* [Data set]. Zenodo. https://doi.org/PLACEHOLDER
+> Pavičević, M., Huallpara, A., Yu, A., Balderrama, S., & Ploussard, Q. (2025). *Water Value Database: A Systematic Review Dataset (Version 1.0.0)* [Data set]. Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
 
 **Companion article:**
 > [PLACEHOLDER — full citation of companion article]
