@@ -1,0 +1,29 @@
+Water Value Database — Analytical Chart Captions
+Generated: 2026-02-25 16:35:35
+========================================================================
+
+[fig_year_method_stacked]
+Figure X. Distribution of the 277 classified papers by publication year (1984–2026), stacked by optimization/analysis method (Method_clean). Solid and dashed black lines show 3-year and 5-year centered moving averages of total annual publications, respectively. The 5-year moving average peaks at 18.6 papers per year around 2017. This figure complements Figure 3a in the companion article [REF-companion], which stacks the same temporal distribution by classification category (A–H, R). The methodological stacking reveals the temporal evolution of analytical approaches, including the early dominance of LP methods and the subsequent adoption of stochastic approaches (SDP, SDDP). Method abbreviations: LP = Linear Programming, MILP = Mixed-Integer Linear Programming, SDP = Stochastic Dynamic Programming, SDDP = Stochastic Dual Dynamic Programming, Econ-Engi = Economic-Engineering approach.
+
+────────────────────────────────────────────────────────────────────────
+
+[fig_geographic_distribution]
+Figure X. Geographic distribution of study regions across the 277 classified papers (top 15 countries/regions shown). Approximately 61.7% of papers did not specify a study region and are categorized as 'Not specified'. Country names follow ISO 3166-1 conventions. Gray bars indicate non-geographic categories.
+
+────────────────────────────────────────────────────────────────────────
+
+[fig_wv_datapoints_by_year]
+Figure X. Distribution of 462 water value data points by publication year (2001–2025), stacked by water use purpose. Unlike the publication timeline in the companion article [REF-companion], which counts papers, this figure shows the number of individual water value observations extracted from each paper, revealing the data extraction density across time. A single paper may contribute multiple data points (average 7.2 per paper). The 462 data points were extracted from 64 papers reporting numerical water values.
+
+────────────────────────────────────────────────────────────────────────
+
+[fig_continent_purpose_heatmap]
+Figure X. Cross-tabulation of water value data points by continent and water use purpose. Cell values indicate the number of data points for each combination. Darker colors indicate higher concentrations. The 462 data points span 5 continents and 5 purpose categories. Continental assignments follow UN M49 macro-geographical regions. Empty or low-value cells highlight geographic and thematic coverage gaps in the water value literature — for example, the concentration of urban/municipal water values in North America and the limited coverage of African and Oceanian water systems.
+
+────────────────────────────────────────────────────────────────────────
+
+[fig_category_method_heatmap]
+Figure X. Cross-tabulation of classification categories and optimization/analysis methods across the 277 classified papers. Cell values indicate the number of papers using each method within each category. Darker colors indicate higher concentrations. Category definitions are provided in the companion article [REF-companion]. LP = Linear Programming, MILP = Mixed-Integer Linear Programming, SDP = Stochastic Dynamic Programming, SDDP = Stochastic Dual Dynamic Programming, Econ-Engi = Economic-Engineering approach.
+
+────────────────────────────────────────────────────────────────────────
+

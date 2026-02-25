@@ -1,0 +1,143 @@
+Water Value Database — Completeness Heatmap Report
+Generated: 2026-02-25 16:35:31
+========================================================================
+
+
+════════════════════════════════════════════════════════════════════════
+  BLUEPRINT 2 — B2-T08: Data Completeness Heatmap
+════════════════════════════════════════════════════════════════════════
+
+
+  ────────────────────────────────────────────────────────────
+  Loading data
+  ────────────────────────────────────────────────────────────
+
+  ✓ Loaded 01_Screening          (659 rows × 16 cols)
+  ✓ Loaded 02_Classification     (277 rows × 23 cols)
+  ✓ Loaded 03_WaterValue         (462 rows × 34 cols)
+
+  ────────────────────────────────────────────────────────────
+  Calculating Completeness
+  ────────────────────────────────────────────────────────────
+
+
+  01_Screening (16 original columns):
+    ✓ ID                                        100%
+    ⚠ EID                                        95%
+    ✓ Reference_Type                            100%
+    ✓ Authors                                   100%
+    ✓ Year                                      100%
+    ✓ Title                                     100%
+    ✓ SOURCE                                    100%
+    ✓ Search_Variant                            100%
+    ✓ Duplicate_Flag                            100%
+    ✗ Stage1_Decision                             4%
+    ✗ Stage1_Reason                               4%
+    ✗ Stage2_Decision                            10%
+    ✗ Stage2_Reason                               6%
+    ✓ Screener                                  100%
+    ✓ Final_Decision                            100%
+    ⚠ Exclusion_Stage                            58%
+
+  02_Classification (15 original columns):
+    ✓ ID                                        100%
+    ✓ Authors                                   100%
+    ✓ Year                                      100%
+    ✓ Title                                     100%
+    ✓ Search engine                             100%
+    ✓ Classification                            100%
+    ⚠ Problem_statement                          94%
+    ⚠ Research_gap                               94%
+    ⚠ Contribution                               94%
+    ⚠ Method                                     87%
+    ✗ Study region                               38%
+    ✗ Numerical water value                      23%
+    ⚠ DOI                                        95%
+    ⚠ Extraction_source                          94%
+    ✗ Notes                                       0%
+
+  03_WaterValue (27 original columns):
+    ✓ ID                                        100%
+    ✓ Authors                                   100%
+    ✓ Title                                     100%
+    ✓ Paper_year                                100%
+    ⚠ WV_nominal_year                            93%
+    ✓ Country                                   100%
+    ⚠ State                                      59%
+    ⚠ Sub_state                                  53%
+    ✓ Purpose                                   100%
+    ✓ Method                                    100%
+    ✓ Paper_time_horizon                        100%
+    ✓ Paper_stochasticity                       100%
+    ✓ units                                     100%
+    ✗ WV_min_raw                                 41%
+    ⚠ WV_median_raw                              96%
+    ✗ WV_max_raw                                 48%
+    ⚠ Conversion_factor                          98%
+    ✗ Conversion_factor_note                      0%
+    ✗ WV_min                                     40%
+    ⚠ WV_median                                  95%
+    ✗ WV_max                                     48%
+    ⚠ Notes                                      90%
+    ✓ paper_metadata_source                     100%
+    ✓ paper_metadata_needs_review               100%
+    ✓ is_time_horizon_imputed                   100%
+    ✓ is_stochastic_imputed                     100%
+    ✓ is_purpose_imputed                        100%
+
+════════════════════════════════════════════════════════════════════════
+  Creating Heatmap Figure
+════════════════════════════════════════════════════════════════════════
+
+
+  ────────────────────────────────────────────────────────────
+  Creating Heatmap Figure
+  ────────────────────────────────────────────────────────────
+
+  ✓ fig_completeness_heatmap.png  (438.1 KB)
+  ✓ fig_completeness_heatmap.pdf  (47.0 KB)
+
+  ────────────────────────────────────────────────────────────
+  Generating Caption
+  ────────────────────────────────────────────────────────────
+
+  ✓ Caption saved: fig_completeness_heatmap_caption.txt
+
+  Caption text:
+  Figure X. Data completeness heatmap showing the percentage of non-null values for each original data column across the three dataset files. Green indicates complete or near-complete data (≥90%), yellow indicates partial completeness (50–89%), and red indicates significant gaps (<50%). Only original data columns are shown; derived variables (e.g., Country_clean, Method_clean, Continent) created during standardization are excluded as they are 100% complete by construction. The 'Study region' column in 02_Classification shows 38% completeness, reflecting that many papers do not explicitly specify a geographic study area. Columns such as 'Notes' and 'Sub_state' have intentionally low completeness as they are optional fields. The WV_min, WV_median, and WV_max columns in 03_WaterValue show 0% completeness as the unit conversion pipeline is pending completion by a collaborator.
+
+  ────────────────────────────────────────────────────────────
+  Completeness Summary
+  ────────────────────────────────────────────────────────────
+
+  01_Screening:
+    Columns: 16
+    100% complete:   10 (62%)
+    Partial (1-99%):  6 (38%)
+    Empty (0%):       0 (0%)
+    Average completeness: 73.6%
+
+  02_Classification:
+    Columns: 15
+    100% complete:    6 (40%)
+    Partial (1-99%):  8 (53%)
+    Empty (0%):       1 (7%)
+    Average completeness: 81.3%
+
+  03_WaterValue:
+    Columns: 27
+    100% complete:   15 (56%)
+    Partial (1-99%): 11 (41%)
+    Empty (0%):       1 (4%)
+    Average completeness: 83.7%
+
+
+════════════════════════════════════════════════════════════════════════
+  B2-T08 COMPLETE
+════════════════════════════════════════════════════════════════════════
+
+  Completeness heatmap generated.
+  Figure: figures/fig_completeness_heatmap.png
+  Figure: figures/fig_completeness_heatmap.pdf
+  Caption: figures/fig_completeness_heatmap_caption.txt
+  Ready for B2-T09 (analytical charts).

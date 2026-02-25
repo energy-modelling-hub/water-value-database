@@ -1,0 +1,157 @@
+Water Value Database — Analytical Charts Report
+Generated: 2026-02-25 16:35:35
+========================================================================
+
+
+════════════════════════════════════════════════════════════════════════
+  BLUEPRINT 2 — B2-T09/T12: Analytical Charts
+════════════════════════════════════════════════════════════════════════
+
+
+  ────────────────────────────────────────────────────────────
+  Loading data
+  ────────────────────────────────────────────────────────────
+
+  ✓ Loaded classification:  277 rows × 23 cols
+  ✓ Loaded water_values:    462 rows × 34 cols
+
+════════════════════════════════════════════════════════════════════════
+  Generating Analytical Charts
+════════════════════════════════════════════════════════════════════════
+
+
+  ────────────────────────────────────────────────────────────
+  Chart 1: Year × Method Stacked Bar + Trendlines
+  ────────────────────────────────────────────────────────────
+
+  Year range displayed: 1984–2026
+  Total papers: 276
+  Method breakdown:
+    LP                      40
+    MILP                    28
+    SDP                     21
+    SDDP                    16
+    Econ-Engi               55
+    Other                   70
+    Not available           46
+
+  Trendlines:
+    3-year MA range: 0.3 – 19.0
+    5-year MA range: 0.4 – 18.6
+    3-year MA peak:  2016 (19.0 papers/yr)
+    5-year MA peak:  2017 (18.6 papers/yr)
+  ✓ fig_year_method_stacked.png                    (188.4 KB)
+  ✓ fig_year_method_stacked.pdf                    (23.5 KB)
+
+  Caption: Figure X. Distribution of the 277 classified papers by publication year (1984–20...
+
+  ────────────────────────────────────────────────────────────
+  Chart 2: Geographic Distribution
+  ────────────────────────────────────────────────────────────
+
+  Showing 15 countries + Other + special categories
+  'Not specified': 171 (61.7%)
+  ✓ fig_geographic_distribution.png                (174.7 KB)
+  ✓ fig_geographic_distribution.pdf                (22.4 KB)
+
+  Caption: Figure X. Geographic distribution of study regions across the 277 classified pap...
+
+  ────────────────────────────────────────────────────────────
+  Chart 3: WV Data Points by Year × Purpose
+  ────────────────────────────────────────────────────────────
+
+  Year range: 2001–2025
+  Total data points: 462
+  Unique papers: 64
+  Purpose breakdown:
+    Mixed                  147  ( 31.8%)
+    Agriculture             98  ( 21.2%)
+    Hydropower              93  ( 20.1%)
+    Urban/Municipal         87  ( 18.8%)
+    Environmental           37  (  8.0%)
+  ✓ fig_wv_datapoints_by_year.png                  (102.0 KB)
+  ✓ fig_wv_datapoints_by_year.pdf                  (20.5 KB)
+
+  Caption: Figure X. Distribution of 462 water value data points by publication year (2001–...
+
+  ────────────────────────────────────────────────────────────
+  Chart 4: Continent × Purpose Heatmap
+  ────────────────────────────────────────────────────────────
+
+  Cross-tabulation shape: (5, 5)
+  Continents: ['North America', 'Europe', 'Asia/Oceania', 'South America', 'Africa']
+  Purposes: ['Mixed', 'Agriculture', 'Hydropower', 'Urban/Municipal', 'Environmental']
+
+  Cross-tabulation:
+Purpose_clean  Mixed  Agriculture  Hydropower  Urban/Municipal  Environmental
+Continent                                                                    
+North America     97           85           2               82             25
+Europe            19            2          79                3              3
+Asia/Oceania      18            7          11                2              9
+South America      8            2           1                0              0
+Africa             5            2           0                0              0
+  ✓ fig_continent_purpose_heatmap.png              (147.1 KB)
+  ✓ fig_continent_purpose_heatmap.pdf              (24.9 KB)
+
+  Caption: Figure X. Cross-tabulation of water value data points by continent and water use...
+
+  ────────────────────────────────────────────────────────────
+  Chart 5: Classification Category × Method Heatmap
+  ────────────────────────────────────────────────────────────
+
+  Cross-tabulation shape: (9, 7)
+  Row categories: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'R']
+  Column methods: ['LP', 'MILP', 'SDP', 'SDDP', 'Econ-Engi', 'Other', 'Not available']
+
+  Cross-tabulation:
+Method_clean    LP  MILP  SDP  SDDP  Econ-Engi  Other  Not available
+Classification                                                      
+A               10     9    9     8         15     11              2
+B                2     4    5     3          3      5              4
+C                7     8    0     1          8     17              7
+D                6     2    1     0          2      8              1
+E                5     0    0     0          6      2              5
+F                5     0    0     0          0      5              3
+G                1     3    3     3         11      7              9
+H                0     0    1     0          6      5              3
+R                4     2    2     1          4     10             13
+  ✓ fig_category_method_heatmap.png                (132.7 KB)
+  ✓ fig_category_method_heatmap.pdf                (24.1 KB)
+
+  Caption: Figure X. Cross-tabulation of classification categories and optimization/analysi...
+
+════════════════════════════════════════════════════════════════════════
+  Captions
+════════════════════════════════════════════════════════════════════════
+
+
+  ────────────────────────────────────────────────────────────
+  Saving Captions
+  ────────────────────────────────────────────────────────────
+
+  ✓ fig_analytical_charts_captions.txt  (4.2 KB)
+  5 captions saved.
+
+════════════════════════════════════════════════════════════════════════
+  B2-T09/T12 COMPLETE
+════════════════════════════════════════════════════════════════════════
+
+  5 analytical charts generated.
+  Figures: figures/fig_*.png and fig_*.pdf
+  Captions: figures/fig_analytical_charts_captions.txt
+
+  Figures generated:
+    1. fig_year_method_stacked     — Year × Method (complements companion Fig 3a)
+    2. fig_geographic_distribution  — Study regions (no companion equivalent)
+    3. fig_wv_datapoints_by_year    — WV data density by year × purpose (NEW)
+    4. fig_continent_purpose_heatmap  — Country × Purpose coverage gaps (NEW)
+    5. fig_category_method_heatmap  — Category × Method cross-tab (no companion equivalent)
+
+  Deferred figures:
+    - Water value box plot by purpose (waiting for unit conversion)
+
+  Removed figures:
+    - Method distribution donut (duplicates companion Fig 3b)
+    - Year distribution simple bar (replaced by year × method stacked)
+
+  Ready for B2-T13 (overlap check and figure inventory).

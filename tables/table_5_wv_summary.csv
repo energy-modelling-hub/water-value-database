@@ -1,0 +1,17 @@
+﻿Statistic,Value
+Total papers reporting numerical water values,64
+Total water value data points,462
+Countries represented,31
+Continents represented,5
+Method categories (manuscript-level),7
+Method types (detailed),11
+Purpose categories,5
+Unique unit types,23
+Publication year range,2001–2025
+Most common purpose,Mixed
+Most common unit,USD/m³
+Most common country,United States
+Most common method,Econ-Engi
+Average data points per paper,7.2
+Maximum data points (single paper),75 (ID: 1-478)
+WV_median_raw completeness,444/462 (96.1%)

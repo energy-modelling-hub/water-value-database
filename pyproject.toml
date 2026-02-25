@@ -1,0 +1,42 @@
+[project]
+name = "water-value-database"
+version = "1.0.0"
+description = "Systematic review dataset of economic water valuations: 276 papers, 461 data points, standardized unit conversions."
+readme = "README.md"
+license = {text = "CC-BY-4.0"}
+requires-python = ">=3.9"
+authors = [
+    {name = "M. Pavičević", email = "mpavicevic@anl.gov"},
+    {name = "A. Huallpara"},
+    {name = "A. Yu"},
+    {name = "S. Balderrama"},
+    {name = "Q. Ploussard"}
+]
+keywords = [
+    "water value",
+    "systematic review",
+    "hydropower",
+    "water resources",
+    "economic valuation",
+]
+
+dependencies = [
+    "pandas>=1.5.0",
+    "matplotlib>=3.6.0",
+    "seaborn>=0.12.0",
+    "numpy>=1.23.0",
+    "openpyxl>=3.0.0",
+]
+
+[project.urls]
+Repository = "https://github.com/energy-modelling-hub/water-value-database"
+Documentation = "https://github.com/energy-modelling-hub/water-value-database#readme"
+Issues = "https://github.com/energy-modelling-hub/water-value-database/issues"
+Zenodo = "https://doi.org/[PLACEHOLDER]"
+
+
+[tool.hatch.build.targets.wheel]
+packages = []
+
+[dependency-groups]
+dev = []

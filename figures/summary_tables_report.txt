@@ -1,0 +1,166 @@
+Water Value Database — Summary Tables Report
+Generated: 2026-02-25 16:35:28
+========================================================================
+
+
+════════════════════════════════════════════════════════════════════════
+  BLUEPRINT 2 — B2-T04/T07: Summary Statistics Tables
+════════════════════════════════════════════════════════════════════════
+
+
+  ────────────────────────────────────────────────────────────
+  Loading data
+  ────────────────────────────────────────────────────────────
+
+  ✓ Loaded classification:  277 rows × 23 cols
+  ✓ Loaded water_values:    462 rows × 34 cols
+
+════════════════════════════════════════════════════════════════════════
+  Generating Summary Tables
+════════════════════════════════════════════════════════════════════════
+
+
+  ────────────────────────────────────────────────────────────
+  Table 1: Papers by Classification Category
+  ────────────────────────────────────────────────────────────
+
+  Category   Name                                                Count       %
+  —————————— —————————————————————————————————————————————————— —————— ———————
+  A          Hydropower scheduling and water values                 64   23.1%
+  B          Stochastic programming for hydropower                  26    9.4%
+  C          Hydro-economic modelling                               48   17.3%
+  D          Irrigation and agricultural water value                20    7.2%
+  E          Urban and municipal water value                        18    6.5%
+  F          Environmental and ecological water value               13    4.7%
+  G          Multi-purpose reservoir operation                      37   13.4%
+  H          Water markets and pricing                              15    5.4%
+  R          Review / Other                                         36   13.0%
+  Total                                                            277  100.0%
+
+  ────────────────────────────────────────────────────────────
+  Table 2: Papers by Method Type
+  ────────────────────────────────────────────────────────────
+
+  Method                Count       %
+  ———————————————————— —————— ———————
+  Other                    70   25.3%
+  Econ-Engi                55   19.9%
+  Not available            47   17.0%
+  LP                       40   14.4%
+  MILP                     28   10.1%
+  SDP                      21    7.6%
+  SDDP                     16    5.8%
+  Total                   277  100.0%
+
+  ────────────────────────────────────────────────────────────
+  Table 3: Papers by Study Region / Country
+  ────────────────────────────────────────────────────────────
+
+  Country/Region                                      Count       %
+  —————————————————————————————————————————————————— —————— ———————
+  Not specified                                         171   61.7%
+  Other (18 countries/regions)                           24    8.7%
+  United States                                          14    5.1%
+  Synthetic/Theoretical                                  12    4.3%
+  China                                                  11    4.0%
+  Nordic countries (region)                               8    2.9%
+  Norway                                                  6    2.2%
+  Spain                                                   5    1.8%
+  New Zealand                                             4    1.4%
+  Canada                                                  4    1.4%
+  Brazil                                                  3    1.1%
+  Chile                                                   3    1.1%
+  Multi-country                                           3    1.1%
+  Europe (region)                                         3    1.1%
+  Germany                                                 3    1.1%
+  Australia                                               3    1.1%
+  Total                                                 277  100.0%
+
+  Note: 61.7% of papers did not specify a study region.
+
+  ────────────────────────────────────────────────────────────
+  Table 4: Papers by Publication Year Range
+  ────────────────────────────────────────────────────────────
+
+  Year Range       Count       %
+  ——————————————— —————— ———————
+  Pre-2000            11    4.0%
+  2000–2004           17    6.1%
+  2005–2009           32   11.6%
+  2010–2014           55   19.9%
+  2015–2019           93   33.6%
+  2020–2025           69   24.9%
+  Total              277  100.0%
+
+  Earliest year: 1931
+  Latest year:   2026
+  Median year:   2016
+
+  ────────────────────────────────────────────────────────────
+  Table 5: Water Value Summary Statistics
+  ────────────────────────────────────────────────────────────
+
+  Statistic                                          Value                         
+  —————————————————————————————————————————————————— ——————————————————————————————
+  Total papers reporting numerical water values      64                            
+  Total water value data points                      462                           
+  Countries represented                              31                            
+  Continents represented                             5                             
+  Method categories (manuscript-level)               7                             
+  Method types (detailed)                            11                            
+  Purpose categories                                 5                             
+  Unique unit types                                  23                            
+  Publication year range                             2001–2025                     
+  Most common purpose                                Mixed                         
+  Most common unit                                   USD/m³                        
+  Most common country                                United States                 
+  Most common method                                 Econ-Engi                     
+  Average data points per paper                      7.2                           
+  Maximum data points (single paper)                 75 (ID: 1-478)                
+  WV_median_raw completeness                         444/462 (96.1%)               
+
+  ────────────────────────────────────────────────────────────
+  Table 6: Water Values by Purpose
+  ────────────────────────────────────────────────────────────
+
+  Purpose               Points      %  Papers  Countries  Continents
+  ———————————————————— ——————— —————— ——————— —————————— ———————————
+  Mixed                    147  31.8%      22         11           5
+  Agriculture               98  21.2%      17          8           5
+  Hydropower                93  20.1%      29         21           4
+  Urban/Municipal           87  18.8%      11          5           3
+  Environmental             37   8.0%       5          5           3
+  Total                    462 100.0%      64         31           5
+
+════════════════════════════════════════════════════════════════════════
+  Exporting Tables
+════════════════════════════════════════════════════════════════════════
+
+
+  ────────────────────────────────────────────────────────────
+  CSV Export
+  ────────────────────────────────────────────────────────────
+
+  ✓ table_1_classification.csv           (0.4 KB)
+  ✓ table_2_methods.csv                  (0.1 KB)
+  ✓ table_3_regions.csv                  (0.4 KB)
+  ✓ table_4_years.csv                    (0.2 KB)
+  ✓ table_5_wv_summary.csv               (0.5 KB)
+  ✓ table_6_wv_purpose.csv               (0.3 KB)
+
+  ────────────────────────────────────────────────────────────
+  Formatted Text Export
+  ────────────────────────────────────────────────────────────
+
+  ✓ all_tables_formatted.txt  (6.3 KB)
+
+  All tables exported to: tables
+
+════════════════════════════════════════════════════════════════════════
+  B2-T04/T07 COMPLETE
+════════════════════════════════════════════════════════════════════════
+
+  6 summary tables generated and exported.
+  CSV files:       tables/table_*.csv
+  Formatted text:  tables/all_tables_formatted.txt
+  Ready for B2-T08 (completeness heatmap).
