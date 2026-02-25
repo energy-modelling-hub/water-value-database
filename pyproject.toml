@@ -32,7 +32,7 @@ dependencies = [
 Repository = "https://github.com/energy-modelling-hub/water-value-database"
 Documentation = "https://github.com/energy-modelling-hub/water-value-database#readme"
 Issues = "https://github.com/energy-modelling-hub/water-value-database/issues"
-Zenodo = "https://doi.org/[PLACEHOLDER]"
+Zenodo = "https://doi.org/10.5281/zenodo.18778100"
 
 
 [tool.hatch.build.targets.wheel]
