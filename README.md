@@ -34,17 +34,14 @@ All data files are located in the `data/` directory.
 
 ## Python Scripts
 
-All scripts are located in the `scripts/` directory. The pipeline reads from the raw CSV files in `data/`, processes and reconciles the data, and produces all derived outputs.
+All scripts are located in the `scripts/` directory. The scripts read from the SQLite database in `data/` and regenerate all summary tables and figures.
 
 | Script | Description |
 |--------|-------------|
-| `01_data_preparation.py` | Loads all three raw CSVs, cleans artifacts, reconciles cross-file relationships, renames columns to professional standards, anonymizes screener identifiers, adds derived columns (`Final_Decision`, `Exclusion_Stage`), and exports the SQLite database, Excel workbook, and clean CSVs. |
-| `02_derived_variables.py` | Standardizes column values and creates derived analytical variables: `Year_numeric`, `Decade`, `Has_water_value`, three-level method hierarchy (`Method_clean`, `Method_category`, `Method_detail`), ISO-aligned geographic names (`Study_region_clean`, `Country_clean`, `Continent`), standardized purposes (`Purpose_clean`), and standardized units (`units_clean`). |
-| `02_summary_tables.py` | Generates summary statistics tables: papers by classification category, method type, study region/country, publication year range, and water value summary statistics by purpose. Exports as CSV and formatted text. |
-| `03_completeness_heatmap.py` | Calculates column-level data completeness for all three files and generates an annotated heatmap visualization (RdYlGn colormap). |
-| `04_analytical_charts.py` | Generates publication-quality analytical figures: publication year distribution, geographic distribution, method distribution (donut chart), water value range by purpose (box plot, log scale), and classification category × method cross-tabulation heatmap. |
-| `05_overlap_check.py` | Compares generated figures and tables against the companion article to flag any duplicate visualizations or content overlap. |
-| `06_run_pipeline.py` | Runs all scripts in sequence and verifies that all expected outputs are generated. |
+| `01_summary_tables.py` | Generates summary statistics tables: papers by classification category, method type, study region/country, publication year range, and water value summary statistics by purpose. Exports as CSV and formatted text to `tables/`. |
+| `02_completeness_heatmap.py` | Calculates column-level data completeness for all three files and generates an annotated heatmap visualization (RdYlGn colormap). Exports to `figures/`. |
+| `03_analytical_charts.py` | Generates publication-quality analytical figures: year × method stacked bar with trendlines, geographic distribution, water value data points by year × purpose, continent × purpose heatmap, and classification category × method heatmap. Exports to `figures/`. |
+| `04_run_pipeline.py` | Runs all analysis scripts in sequence and verifies that all expected outputs are generated. |
 
 ### How to Run
 
@@ -63,15 +60,22 @@ uv run python scripts/04_run_pipeline.py
 
 Alternatively, run individual scripts in numbered order:
 ```bash
-python scripts/01_data_preparation.py
-python scripts/02_derived_variables.py
-python scripts/01_summary_tables.py
-python scripts/02_completeness_heatmap.py
-python scripts/03_analytical_charts.py
-python scripts/05_overlap_check.py
+uv run python scripts/01_summary_tables.py
+uv run python scripts/02_completeness_heatmap.py
+uv run python scripts/03_analytical_charts.py
 ```
 
-Note: Scripts 01 and 02_derived_variables must run before all others. The remaining scripts depend on the SQLite database produced by the first two scripts.
+Without uv: You can also use pip directly:
+```bash
+python -m venv .venv
+source .venv/bin/activate   # Linux/macOS
+# .venv\Scripts\activate    # Windows
+pip install .
+python scripts/04_run_pipeline.py
+```
+
+All scripts read from data/water_value_database.db and write outputs to figures/ and tables/.
+
 
 ### Figures
 All figures are located in the figures/ directory. Each figure is provided in both PNG (300 dpi) and PDF formats.
@@ -88,6 +92,21 @@ All figures are located in the figures/ directory. Each figure is provided in bo
 | **fig_method_distribution** | **Distribution of estimation methods** across included papers (donut chart). |
 | **fig_wv_boxplot** | **Water value ranges** by purpose/sector (box plot on logarithmic scale). |
 | **fig_category_method_heatmap** | **Cross-tabulation** of classification categories and method types. |
+
+
+### Tables
+
+All summary tables are located in the `tables/` directory.
+
+| Table File | Description |
+| :--- | :--- |
+| `table_1_classification.csv` | **Papers by classification category** (A–H, R). |
+| `table_2_methods.csv` | **Papers by method type** (Method_clean). |
+| `table_3_regions.csv` | **Papers by study region/country.** |
+| `table_4_years.csv` | **Papers by publication year range.** |
+| `table_5_wv_summary.csv` | **Water value summary statistics.** |
+| `table_6_wv_purpose.csv` | **Water values by purpose/sector.** |
+| `all_tables_formatted.txt` | **All tables combined** in formatted text. |
 
 ---
 
@@ -131,7 +150,6 @@ water-value-database/
 ├── LICENSE
 ├── pyproject.toml
 ├── uv.lock
-├── .gitignore
 ├── data/
 │   ├── 01_Screening_clean.csv
 │   ├── 02_Classification_clean.csv
@@ -170,3 +188,6 @@ water-value-database/
     ├── table_5_wv_summary.csv
     └── table_6_wv_purpose.csv
 ```
+
+### Contact
+For questions about this dataset, please open an issue in this repository or contact the corresponding author at mpavicevic@anl.gov. 
