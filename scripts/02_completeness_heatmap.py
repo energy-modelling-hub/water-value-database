@@ -172,7 +172,7 @@ def create_heatmap(
     plt.rcParams.update({
         "font.family": "sans-serif",
         "font.sans-serif": ["Arial", "Helvetica", "DejaVu Sans"],
-        "font.size": 9,
+        "font.size": 10,
         "axes.titlesize": 11,
         "axes.labelsize": 10,
     })
@@ -184,7 +184,7 @@ def create_heatmap(
     max_cols = max(n_cols_per_file)
 
     # Figure dimensions
-    fig_width = max(14, max_cols * 0.55)
+    fig_width = max(12, max_cols * 0.55)
     subplot_height = 1.2
     title_space = 1.0
     bottom_space = 2.5  # space for rotated labels on bottom subplot
@@ -231,7 +231,7 @@ def create_heatmap(
             ax.text(
                 j, 0, f"{int(val)}",
                 ha="center", va="center",
-                fontsize=7, fontweight="bold",
+                fontsize=10, fontweight="bold",
                 color=text_color,
             )
 
@@ -246,14 +246,14 @@ def create_heatmap(
                 cols,
                 rotation=45,
                 ha="right",
-                fontsize=7,
+                fontsize=9,
             )
         else:
             ax.set_xticklabels(
                 cols,
                 rotation=45,
                 ha="right",
-                fontsize=7,
+                fontsize=9,
             )
 
         # Cell borders

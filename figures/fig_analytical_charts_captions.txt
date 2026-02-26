@@ -1,5 +1,5 @@
 Water Value Database — Analytical Chart Captions
-Generated: 2026-02-25 16:35:35
+Generated: 2026-02-26 09:24:47
 ========================================================================
 
 [fig_year_method_stacked]

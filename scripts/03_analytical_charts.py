@@ -247,7 +247,7 @@ def create_year_method_stacked(df: pd.DataFrame) -> None:
     _print(f"    5-year MA peak:  {peak_5yr} ({ma_5yr.loc[peak_5yr]:.1f} papers/yr)")
 
     # Create figure
-    fig, ax = plt.subplots(figsize=(14, 4.5))
+    fig, ax = plt.subplots(figsize=(12, 5))
 
     # Stacked bar chart
     bottom = np.zeros(len(year_method))
@@ -400,7 +400,7 @@ def create_geographic_distribution(df: pd.DataFrame) -> None:
            f"({special_counts.get('Not specified', 0)/n_total*100:.1f}%)")
 
     # Create figure
-    fig, ax = plt.subplots(figsize=(14, max(5, len(labels) * 0.3)))
+    fig, ax = plt.subplots(figsize=(12, max(5, len(labels) * 0.3)))
 
     # Color: special categories in gray, regular in steel blue
     colors = []
@@ -502,7 +502,7 @@ def create_wv_datapoints_by_year(df_wv: pd.DataFrame) -> None:
         _print(f"    {purpose:20s}  {count:>4}  ({count/n_total*100:5.1f}%)")
 
     # Create figure
-    fig, ax = plt.subplots(figsize=(14, 4.5))
+    fig, ax = plt.subplots(figsize=(12, 5))
 
     # Stacked bar chart
     bottom = np.zeros(len(year_purpose))
@@ -603,7 +603,7 @@ def create_continent_purpose_heatmap(df_wv: pd.DataFrame) -> None:
     _print(crosstab.to_string())
 
     # Create figure
-    fig, ax = plt.subplots(figsize=(14, 4.5))
+    fig, ax = plt.subplots(figsize=(12, 5))
 
     # Heatmap
     sns.heatmap(
@@ -698,7 +698,7 @@ def create_category_method_heatmap(df: pd.DataFrame) -> None:
     _print(crosstab.to_string())
 
     # Create figure
-    fig, ax = plt.subplots(figsize=(14, 5))
+    fig, ax = plt.subplots(figsize=(12, 5))
 
     # Heatmap
     sns.heatmap(
@@ -713,7 +713,7 @@ def create_category_method_heatmap(df: pd.DataFrame) -> None:
             "shrink": 0.8,
         },
         ax=ax,
-        annot_kws={"size": 8},
+        annot_kws={"size": 10},
         vmin=0,
     )
 
