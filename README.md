@@ -151,9 +151,9 @@ water-value-database/
 ├── pyproject.toml
 ├── uv.lock
 ├── data/
-│   ├── 01_Screening_clean.csv
-│   ├── 02_Classification_clean.csv
-│   ├── 03_WaterValue_clean.csv
+│   ├── 01_Screening.csv
+│   ├── 02_Classification.csv
+│   ├── 03_WaterValue.csv
 │   ├── water_value_database.db
 │   └── water_value_database.xlsx
 ├── scripts/

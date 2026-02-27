@@ -1,5 +1,5 @@
 Water Value Database — Summary Tables
-Generated: 2026-02-26 09:24:40
+Generated: 2026-02-27 10:12:43
 ========================================================================
 
 Table 1. Distribution of 277 classified papers across nine classification categories. Category definitions are provided in the companion article [REF-companion].
